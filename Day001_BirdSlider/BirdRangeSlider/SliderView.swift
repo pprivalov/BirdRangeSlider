@@ -184,7 +184,7 @@ struct SliderView: View {
                 maxValueText = "до"
             }
         } else {
-            minValueText = Int(minValue).formatWithSpacing() + " ₴"
+            minValueText = Int(minValue).formatWithSpacing() + (minValue > 0 ? " ₴" : "")
             
             if maxValue > maxRange {
                 withAnimation(.easeIn(duration: 0.1)) {
